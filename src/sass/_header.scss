@@ -1,0 +1,105 @@
+.header__container{
+    display: flex;
+    align-items: center;
+    @media screen and (min-width:$tablet){
+        justify-content: space-between;
+    }
+   @media screen and (min-width:$desktop){
+    justify-content: center;
+   }
+}
+.logo__container{
+    @media screen and (max-width:767px){
+        margin-right: 40px;
+    }
+@media screen and (min-width:$desktop){
+    margin-right: 133px;
+}
+}
+.logo{
+    font-size: 18px;
+    line-height: 1;
+    font-family: $secondFont;
+    font-weight: $logoFontWeight;
+    background: linear-gradient(90.33deg, #F3D0B7 -1.9%, #B3D1D9 104.41%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    line-height: 1;
+    @media screen and (min-width:$tablet){
+        font-size: 23px;
+        line-height: 1.31;
+    }
+}
+.navigation{
+@media screen and (min-width:$desktop){
+    margin-right: 133px;
+}
+}
+.nav__list{
+@media screen and (min-width:$desktop){
+    display: flex;
+        align-items: center;
+        justify-content: center;
+}
+}
+.nav__item{
+    @media screen and (max-width:1279px){
+        &:not(:last-child){
+            margin-bottom: 30px;
+        }
+    }
+@media screen and (min-width:$desktop){
+    &:not(:last-child){
+        margin-right: 80px;
+    }
+}
+}
+.nav__link{
+color: $secondTextColor;
+font-size: 40px;
+line-height: 1.25;
+@media screen and (min-width:$desktop){
+font-size: 22px;
+line-height: 1.14;
+}
+}
+.language{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+@media screen and (min-width:$desktop){
+    
+}
+}
+.language__btn{
+    font-size: 18px;
+    line-height: 1.67;
+    margin-right: 12px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    color: #AFAFAF;
+    cursor: pointer;
+    &.active{
+        text-decoration: underline;
+        color: $btnBgColor;
+    }
+@media screen and (min-width:$desktop){
+    font-size: 22px;
+    line-height: 1.36;
+    margin-right: 6px;
+}
+}
+.phone{
+ @media screen and (min-width:$desktop){
+    margin-right: 20px;
+ }
+}
+.phone__link{
+
+}
+.basket__link{
+    
+}
