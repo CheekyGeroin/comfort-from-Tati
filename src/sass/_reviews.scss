@@ -1,0 +1,14 @@
+.reviews{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    @media screen and (min-width:$desktop){
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+}
+.reviews__title{
+    margin-bottom: 30px;
+    @media screen and(min-width:$desktop){
+        margin-bottom: 40px;
+    }
+}

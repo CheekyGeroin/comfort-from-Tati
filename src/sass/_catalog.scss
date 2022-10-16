@@ -1,0 +1,22 @@
+.catalog{
+    padding-top: 31px;
+    padding-bottom: 31px;
+    @media screen and (min-width:$tablet){
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+   @media screen and (min-width:$desktop){
+    padding-top: 60px;
+    padding-bottom: 60px;
+   }
+}
+.catalog__title{
+    font-size: 28px;
+    line-height: 1;
+    margin-bottom: 30px;
+    @media screen and (min-width:$tablet){
+        font-size: 40px;
+        line-height: 1.25;
+        margin-bottom: 40px;
+    }
+}

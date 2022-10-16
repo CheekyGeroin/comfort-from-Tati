@@ -1,0 +1,55 @@
+.sales__list {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+  }
+}
+.sales__item {
+  margin: 0;
+  &:nth-child(2) {
+    background-color: #b3d1d9;
+  }
+}
+.sales__img {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+.sales__text {
+  font-size: 28px;
+  line-height: 1;
+  font-family: $secondFont;
+  font-weight: 300;
+  margin-bottom: 10px;
+  @media screen and (min-width:$tablet){
+    font-size: 40px;
+    line-height: 1.25;
+    margin-bottom: 37px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 37px;
+  }
+}
+.sales__link{
+    font-size: 28px;
+    line-height: 1;
+    padding: 10px 26px;
+    background-color: $btnBgColor;
+    border-radius: 24px 4px 24px 4px;
+    border: none;
+    color: $mainTextColor;
+    font-family: $secondFont;
+    font-weight: 300;
+    &:hover, &:focus{
+        background-color: $hoverBtnColor;
+    }
+    @media screen and (min-width:$tablet){
+        padding: 12px 34px;
+        border-radius: 32px 4px 32px 4px;
+        font-size: 40px;
+        line-height: 1.25;
+    }
+    @media screen and (min-width:$desktop){
+        font-size: 37px;
+    }
+}
