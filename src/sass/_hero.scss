@@ -2,6 +2,7 @@
     padding-top: 231px;
     padding-bottom: 187px;
     @media screen and (min-width:$tablet){
+      position: relative;
         padding-top: 242px;
         padding-bottom: 206px;
     }
@@ -10,7 +11,24 @@
         padding-bottom: 249px;
     }
 }
+.video{
+  @media screen and ( min-width:$desktop){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    max-height: 752px;
+    z-index: -1;
+  }
+  @media screen and (max-width:1279px){
+    &--desktop{
+      display: none;
+    }
+  }
+}
 .hero__container {
+  z-index: 999;
   margin-bottom: 30px;
   @media screen and (min-width: $desktop) {
     margin-bottom: 50px;
@@ -23,12 +41,14 @@
   font-weight: $mainFontWeight;
   line-height: 1;
   text-align: center;
+  position: relative;
   @media screen and (min-width: $tablet) {
     font-size: 70px;
     line-height: 1.28;
   }
 }
 .btn{
+  z-index: 999;
   display: flex;
   justify-content: center;
 }
