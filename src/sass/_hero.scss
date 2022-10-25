@@ -1,4 +1,5 @@
 .hero {
+max-width: 1600px;
     padding-top: 231px;
     padding-bottom: 187px;
     @media screen and (min-width:$tablet){
@@ -8,8 +9,11 @@
     }
     @media screen and (min-width:$desktop){
         padding-top: 279px;
-        padding-bottom: 249px;
+        padding-bottom: 397px;
     }
+}
+.hero__container{
+  max-width: 1600px;
 }
 .video{
   @media screen and ( min-width:$desktop){
@@ -17,8 +21,8 @@
     top: 0;
     left: 0;
     width: 100%;
+    max-width: 1600px;
     height: auto;
-    max-height: 752px;
     z-index: -1;
   }
   @media screen and (max-width:1279px){
@@ -27,7 +31,7 @@
     }
   }
 }
-.hero__container {
+.hero__text-container {
   z-index: 999;
   margin-bottom: 30px;
   @media screen and (min-width: $desktop) {
