@@ -13,7 +13,7 @@
 .advantages__container{
     @media screen and (min-width:$tablet){
         display: flex;
-            align-items: center;
+            align-items: stretch;
     }
 }
 .images__list{
@@ -27,6 +27,20 @@
     @media screen and (min-width:$desktop){
         &:not(:last-child){
             margin-right: 21px;
+        }
+        &--left{
+            align-self: flex-end;
+        }
+    }
+}
+.advantages__img{
+    @media screen and (min-width:$desktop){
+        border: none;
+        &--left{
+            border-radius: 8px 18px 8px 105px;
+        }
+        &--right{
+            border-radius: 10px 120px 10px 20px;
         }
     }
 }

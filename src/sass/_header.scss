@@ -1,113 +1,131 @@
-.header{
-    position: absolute;
-    width: 100%;
-    z-index: 999;
-    padding-top: 53px;
-    padding-bottom: 35px;
-    border-bottom: 2px solid #F6F7F1;
+.header {
+  position: absolute;
+  width: 100%;
+  z-index: 999;
+  padding-top: 53px;
+  padding-bottom: 35px;
+  border-bottom: 2px solid #f6f7f1;
 }
-.header__container{
-    display: flex;
-    align-items: center;
-    @media screen and (min-width:$tablet){
-        justify-content: space-between;
-    }
-   @media screen and (min-width:$desktop){
+.header__container {
+  display: flex;
+  align-items: center;
+  @media screen and (min-width: $tablet) {
+    justify-content: space-between;
+  }
+  @media screen and (min-width: $desktop) {
     justify-content: center;
-   }
+  }
 }
-.logo__container{
-    @media screen and (max-width:767px){
-        margin-right: 40px;
-    }
-@media screen and (min-width:$desktop){
+.logo__container {
+  @media screen and (max-width: 767px) {
+    margin-right: 40px;
+  }
+  @media screen and (min-width: $desktop) {
     margin-right: 51px;
+  }
 }
+.logo {
+  font-size: 18px;
+  line-height: 1;
+  font-family: $secondFont;
+  font-weight: $logoFontWeight;
+  background: linear-gradient(90.33deg, #f3d0b7 -1.9%, #b3d1d9 104.41%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  line-height: 1;
+  @media screen and (min-width: $tablet) {
+    font-size: 23px;
+    line-height: 1.31;
+  }
 }
-.logo{
-    font-size: 18px;
-    line-height: 1;
-    font-family: $secondFont;
-    font-weight: $logoFontWeight;
-    background: linear-gradient(90.33deg, #F3D0B7 -1.9%, #B3D1D9 104.41%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
-    line-height: 1;
-    @media screen and (min-width:$tablet){
-        font-size: 23px;
-        line-height: 1.31;
-    }
-}
-.navigation{
-@media screen and (min-width:$desktop){
+.navigation {
+  @media screen and (min-width: $desktop) {
     margin-right: 51px;
+  }
 }
-}
-.nav__list{
-@media screen and (min-width:$desktop){
-    display: flex;
-        align-items: center;
-        justify-content: center;
-}
-}
-.nav__item{
-    @media screen and (max-width:1279px){
-        &:not(:last-child){
-            margin-bottom: 30px;
-        }
-    }
-@media screen and (min-width:$desktop){
-    &:not(:last-child){
-        margin-right: 80px;
-    }
-}
-}
-.nav__link{
-color: $secondTextColor;
-font-size: 40px;
-line-height: 1.25;
-@media screen and (min-width:$desktop){
-font-size: 22px;
-line-height: 1.14;
-}
-}
-.language{
+.nav__list {
+  @media screen and (min-width: $desktop) {
     display: flex;
     align-items: center;
-    margin-right: 20px;
-@media screen and (min-width:$desktop){
-    
+    justify-content: center;
+  }
 }
-}
-.language__btn{
-    font-size: 18px;
-    line-height: 1.67;
-    margin-right: 12px;
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    color: #AFAFAF;
-    cursor: pointer;
-    &.active{
-        text-decoration: underline;
-        color: $btnBgColor;
+.nav__item {
+  @media screen and (max-width: 1279px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
     }
-@media screen and (min-width:$desktop){
+  }
+  @media screen and (min-width: $desktop) {
+    &:not(:last-child) {
+      margin-right: 80px;
+    }
+  }
+}
+.nav__link {
+  color: $secondTextColor;
+  font-size: 40px;
+  line-height: 1.25;
+  @media screen and (min-width: $desktop) {
+    font-size: 22px;
+    line-height: 1.14;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      padding 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      padding: 7px 21px;
+      background-color: $btnBgColor;
+      border-radius: 5px;
+    }
+  }
+}
+.language {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  @media screen and (min-width: $desktop) {
+  }
+}
+.language__btn {
+  font-size: 18px;
+  line-height: 1.67;
+  margin-right: 12px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #afafaf;
+  cursor: pointer;
+  &.active {
+    text-decoration: underline;
+    color: $btnBgColor;
+  }
+  @media screen and (min-width: $desktop) {
     font-size: 22px;
     line-height: 1.36;
     margin-right: 6px;
+  }
 }
-}
-.phone{
- @media screen and (min-width:$desktop){
+.phone {
+  @media screen and (min-width: $desktop) {
     margin-right: 20px;
- }
+  }
 }
-.phone__link{
-
+.phone__icon{
+    fill: $btnBgColor;
+    transition: fill 250ms $cubicBezier;
+    &:hover,&:focus{
+        fill: $hoverIconColor;
+    }
 }
-.basket__link{
+.basket__icon{
+    fill: $btnBgColor;
+    transition: fill 250ms $cubicBezier;
     
+        &:hover,
+        &:focus {
+            fill: $hoverIconColor;
+        }
 }

@@ -1,28 +1,48 @@
 .hero {
-max-width: 1600px;
-    padding-top: 231px;
+background: rgba(5, 45, 56, 0.5);
+  background-size: cover;
+    
+}
+.hero__background{
+  position: relative;
+  min-height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 231px;
     padding-bottom: 187px;
-    @media screen and (min-width:$tablet){
+    overflow: hidden;
+    
+  
+    @media screen and (min-width:$tablet) {
       position: relative;
-        padding-top: 242px;
-        padding-bottom: 206px;
+      padding-top: 242px;
+      padding-bottom: 206px;
     }
-    @media screen and (min-width:$desktop){
-        padding-top: 279px;
-        padding-bottom: 397px;
+  
+    @media screen and (min-width:$desktop) {
+      padding-top: 279px;
+      padding-bottom: 249px;
     }
 }
-.hero__container{
-  max-width: 1600px;
+.background__container{
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 15px;
 }
 .video{
   @media screen and ( min-width:$desktop){
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    max-width: 1600px;
+    width: 100vw;
     height: auto;
+    overflow: hidden;
     z-index: -1;
   }
   @media screen and (max-width:1279px){
@@ -31,13 +51,10 @@ max-width: 1600px;
     }
   }
 }
-.hero__text-container {
-  z-index: 999;
-  margin-bottom: 30px;
-  @media screen and (min-width: $desktop) {
-    margin-bottom: 50px;
-  }
-}
+
+// .hero__text-container {
+ 
+// }
 .hero__title {
   color: $secondTextColor;
   font-family: $secondFont;
@@ -46,13 +63,18 @@ max-width: 1600px;
   line-height: 1;
   text-align: center;
   position: relative;
+ 
+    margin-bottom: 30px;
   @media screen and (min-width: $tablet) {
     font-size: 70px;
     line-height: 1.28;
-  }
+  } 
+   @media screen and (min-width: $desktop) {
+       margin-bottom: 50px;
+     }
 }
 .btn{
-  z-index: 999;
+  
   display: flex;
   justify-content: center;
 }
@@ -62,9 +84,11 @@ max-width: 1600px;
   font-family: $secondFont;
   font-weight: $mainFontWeight;
   color: $mainTextColor;
+
   margin-right: auto;
   margin-left: auto;
   padding: 10px 26px;
+
   background-color: $btnBgColor;
   border: none;
   border-radius: 24px 4px 24px 4px;
@@ -76,6 +100,7 @@ max-width: 1600px;
   @media screen and (min-width: $tablet) {
     font-size: 40px;
     line-height: 1.25;
+
     padding: 12px 37px;
     border-radius: 35px 5px 35px 5px;
   }

@@ -1,8 +1,30 @@
 <section class="advantages">
   <div class="container advantages__container">
     <ul class="images__list">
-      <li class="images__item images__item--left"><img src="#" alt="Плед" srcset="#" /></li>
-      <li class="images__item images__item--right"><img src="#" alt="Плед" srcset="#" /></li>
+      <li class="images__item images__item--left">
+        <img
+        class="advantages__img advantages__img--left"
+          srcset="
+            ./images/adv/pink-plaid-265w.jpg 265w,
+            ./images/adv/pink-plaid-530w.jpg 530w
+          "
+          sizes="(min-width: 1280px) 265px,100vw"
+          src="./images/adv/pink-plaid-265w.jpg"
+          alt="рожевий та жовтий пледи"
+        />
+      </li>
+      <li class="images__item images__item--right">
+        <img
+        class="advantages__img advantages__img--right"
+          srcset="
+            ./images/adv/blue-plaid-301w.jpg 301w,
+            ./images/adv/blue-plaid-602w.jpg 602w
+          "
+          sizes="(min-width: 1280px) 301px,100vw"
+          src="./images/adv/blue-plaid-301w.jpg"
+          alt="синій плед"
+        />
+      </li>
     </ul>
     <div class="text__container">
       <h2 class="advantages__title">Переваги</h2>
@@ -18,8 +40,8 @@
             <use href="./images/icons.svg#material"></use>
           </svg>
           <p class="advantages__text">
-            Матеріал, з якого виконані вироби, гіпоалергенний та підходить навіть
-            для немовлят
+            Матеріал, з якого виконані вироби, гіпоалергенний та підходить
+            навіть для немовлят
           </p>
         </li>
         <li class="advantages__item">
@@ -27,8 +49,8 @@
             <use href="./images/icons.svg#diversity"></use>
           </svg>
           <p class="advantages__text">
-            Різноманітність у виборі візерунка, кольору, розміру виробу та надання
-            допомоги у підборі саме під ваш запит
+            Різноманітність у виборі візерунка, кольору, розміру виробу та
+            надання допомоги у підборі саме під ваш запит
           </p>
         </li>
       </ul>
