@@ -1,12 +1,10 @@
 .hero {
-background: rgba(5, 45, 56, 0.5);
-  background-size: cover;
+  background: rgba(5, 45, 56, 0.5);
+  background-size:contain;
     
 }
 .hero__background{
   position: relative;
-  min-height: 100vh;
-  max-height: 100vh;
   display: flex;
   flex-direction: column;
   padding-top: 231px;
@@ -22,18 +20,13 @@ background: rgba(5, 45, 56, 0.5);
   
     @media screen and (min-width:$desktop) {
       padding-top: 279px;
-      padding-bottom: 249px;
+      padding-bottom: 228px;
     }
 }
 .background__container{
   position: relative;
   z-index: 2;
-  display: flex;
-  flex: 1 1 auto;
-  justify-content: center;
   align-items: center;
-  flex-direction: column;
-  padding: 50px 15px;
 }
 .video{
   @media screen and ( min-width:$desktop){
@@ -51,10 +44,6 @@ background: rgba(5, 45, 56, 0.5);
     }
   }
 }
-
-// .hero__text-container {
- 
-// }
 .hero__title {
   color: $secondTextColor;
   font-family: $secondFont;

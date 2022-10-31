@@ -1,83 +1,127 @@
-.advantages{
-    padding-top: 50px;
-    padding-bottom: 50px;
-    @media screen and (min-width:$tablet){
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
-    @media screen and (min-width:$desktop){
-        padding-top: 80px;
-        padding-bottom: 80px;
-    }
+.advantages {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: $secondTextColor;
+  @media screen and (min-width: $tablet) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 }
-.advantages__container{
-    @media screen and (min-width:$tablet){
-        display: flex;
-            align-items: stretch;
-    }
+.advantages__container {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: stretch;
+  }
 }
-.images__list{
-@media screen and (min-width:$desktop){
+.images__list {
+  @media screen and (min-width: $desktop) {
     display: flex;
     align-items: center;
     margin-right: 56px;
+  }
 }
+.images__item {
+  @media screen and (min-width: $desktop) {
+    &:not(:last-child) {
+      margin-right: 21px;
+    }
+    &--left {
+      align-self: flex-end;
+    }
+  }
 }
-.images__item{
-    @media screen and (min-width:$desktop){
-        &:not(:last-child){
-            margin-right: 21px;
-        }
-        &--left{
-            align-self: flex-end;
-        }
-    }
+.images__container {
+  position: relative;
+
+  &--left::before {
+    content: ' ';
+
+    display: block;
+    border-radius: 8px 18px 8px 105px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 266px;
+
+    background: linear-gradient(
+      0deg,
+      rgba(3, 31, 38, 0.3),
+      rgba(3, 31, 38, 0.3)
+    );
+  }
+
+  &--right::before {
+    content: ' ';
+
+    display: block;
+    border-radius: 10px 120px 10px 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 428px;
+
+    background: linear-gradient(
+      0deg,
+      rgba(3, 31, 38, 0.3),
+      rgba(3, 31, 38, 0.3)
+    );
+  }
 }
-.advantages__img{
-    @media screen and (min-width:$desktop){
-        border: none;
-        &--left{
-            border-radius: 8px 18px 8px 105px;
-        }
-        &--right{
-            border-radius: 10px 120px 10px 20px;
-        }
+.advantages__img {
+  @media screen and (min-width: $desktop) {
+    border: none;
+    &--left {
+      border-radius: 8px 18px 8px 105px;
     }
+    &--right {
+      border-radius: 10px 120px 10px 20px;
+    }
+  }
 }
-.advantages__title{
-    font-size: 28px;
-    line-height: 1;
-    font-family: $secondFont;
-    font-weight: $mainFontWeight;
-    margin-bottom: 30px;
-    @media screen and (max-width:767px){
-        text-align: center;
-    }
-    @media screen and (min-width:$tablet){
-        font-size: 40px;
-        line-height: 1.25;
-    }
-    @media screen and (min-width:$desktop){
-        margin-bottom: 40px;
-    }
+.advantages__title {
+  font-size: 28px;
+  line-height: 1;
+  font-family: $secondFont;
+  font-weight: $mainFontWeight;
+  margin-bottom: 30px;
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+  @media screen and (min-width: $tablet) {
+    font-size: 40px;
+    line-height: 1.25;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 40px;
+  }
 }
-.advantages__item{
-    &:not(:last-child){
-        margin-bottom: 10px;
+.advantages__item {
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  @media screen and (min-width: $tablet) {
+    &:not(:last-child) {
+      margin-bottom: 25px;
     }
-    @media screen and (min-width:$tablet){
-        &:not(:last-child){
-            margin-bottom: 25px; 
-        }
-    }
+  }
 }
-.advantages__icon{
-margin-bottom: 10px;
+.advantages__icon {
+  margin-bottom: 10px;
 }
-.advantages__text{
-    line-height: 1.11;
-    @media screen and (min-width:$tablet){
-        font-size: 22px;
-        line-height: 1.14;
-    }
+.advantages__text {
+  line-height: 1.11;
+  @media screen and (min-width: $tablet) {
+    font-size: 22px;
+    line-height: 1.14;
+  }
 }
