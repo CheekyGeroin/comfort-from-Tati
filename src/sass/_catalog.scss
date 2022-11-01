@@ -26,8 +26,13 @@
   }
 }
 .catalog__list {
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width:$tablet){
     display: grid;
+    grid-template-columns: repeat(2, 303px);
+    grid-template-rows: repeat(4, 182px);
+    // grid-row-gap: 20px;
+  }
+  @media screen and (min-width: $desktop) {
     grid-template-columns: repeat(3, 370px);
     grid-template-rows: repeat(2, 270px);
     grid-column-gap: 14px;
@@ -35,6 +40,39 @@
 }
 .catalog__item {
   position: relative;
+  transition: transform 250ms $cubicBezier;
+  
+    &:hover,
+    &:focus {
+      transform: scale(1.05);
+    }
+  @media screen and (min-width:$tablet){
+    &--first{
+      grid-column: 1;
+      grid-row: 1 / 2;
+      align-self: flex-start;
+    }
+    &--second{
+      grid-column: 2;
+      grid-row: 4;
+      align-self: flex-end;
+    }
+    &--third{
+      grid-column: 2;
+      grid-row: 1 / 2;
+      align-self: flex-start;
+    }
+    &--fourth{
+      grid-column: 2;
+      grid-row:3;
+      align-self: flex-end;
+    }
+    &--fifth{
+      grid-column: 1;
+      grid-row: 4;
+      align-self: flex-end;
+    }
+  }
   @media screen and (min-width: $desktop) {
     &--first {
       grid-column: 1;
@@ -60,12 +98,7 @@
       grid-row: 2;
       align-self: flex-end;
     }
-    transition: transform 250ms $cubicBezier;
-
-    &:hover,
-    &:focus {
-      transform: scale(1.05);
-    }
+    
   }
 }
 
@@ -85,7 +118,6 @@
 }
 .image__container {
   position: relative;
-   
   &--first::before {
     content: ' ';
     display: block;
@@ -96,9 +128,8 @@
 
     width: 100%;
     height: 100%;
-    max-width: 366px;
-    max-height: 541px;
     z-index: 2;
+
     border-radius: 20px;
 
     background: linear-gradient(
@@ -107,6 +138,7 @@
       rgba(3, 31, 38, 0.3)
     );
   }
+
   &--second::before {
     content: ' ';
     display: block;
@@ -118,8 +150,7 @@
     width: 100%;
     height: 100%;
     z-index: 2;
-    max-width: 356px;
-    max-height: 258px;
+
     border-radius: 20px;
 
     background: linear-gradient(
@@ -128,6 +159,7 @@
       rgba(3, 31, 38, 0.3)
     );
   }
+
   &--third::before {
     content: ' ';
     display: block;
@@ -138,9 +170,8 @@
 
     width: 100%;
     height: 100%;
-    max-width: 368px;
-    max-height: 352px;
     z-index: 2;
+
     border-radius: 20px;
 
     background: linear-gradient(
@@ -149,6 +180,7 @@
       rgba(3, 31, 38, 0.3)
     );
   }
+
   &--fourth::before {
     content: ' ';
     display: block;
@@ -159,9 +191,8 @@
 
     width: 100%;
     height: 100%;
-    max-width: 356px;
-    max-height: 258px;
     z-index: 2;
+
     border-radius: 20px;
 
     background: linear-gradient(
@@ -170,22 +201,70 @@
       rgba(3, 31, 38, 0.3)
     );
   }
+
   &--fifth::before {
-      content: " ";
-      display: block;
+    content: ' ';
+    display: block;
 
-      position: absolute;
-      top: 0;
-      left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
 
-      width: 100%;
-      height: 100%;
-      max-width: 370px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+
+    border-radius: 20px;
+
+    background: linear-gradient(
+      0deg,
+      rgba(3, 31, 38, 0.3),
+      rgba(3, 31, 38, 0.3)
+    );
+  }
+
+  @media screen and (min-width: $tablet) {
+    &--first::before {
+      max-width: 289px;
+      max-height: 541px;
+    }
+    &--second::before{
+      width: 368px;
       max-height: 162px;
-      z-index: 2;
-      border-radius: 20px;
+    }
+    &--third::before {
+      width: 368px;
+      max-height: 352px;
+    }
+    &--fourth::before{
+      width: 368px;
+      max-height: 179px;
+    }
+    &--fifth::before{
+      max-width: 289px;
+      max-height: 162px;
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    &--first::before {
+      max-width: 366px;
+      
+    }
 
-      background: linear-gradient(0deg, rgba(3, 31, 38, 0.3), rgba(3, 31, 38, 0.3));
+    &--second::before {
+      max-width: 356px;
+      max-height: 258px;
+    }
+
+    &--fourth::before {
+      max-width: 356px;
+      max-height: 258px;
+    }
+
+    &--fifth::before {
+      max-width: 370px;
+      
+    }
   }
 }
 .catalog__img {
