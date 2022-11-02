@@ -26,6 +26,11 @@
   }
 }
 .catalog__list {
+  @media screen and (max-width:767px){
+    max-width: 315px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   @media screen and (min-width:$tablet){
     display: grid;
     grid-template-columns: repeat(2, 303px);
@@ -45,6 +50,11 @@
     &:hover,
     &:focus {
       transform: scale(1.05);
+    }
+    @media screen and (max-width:767px){
+      &:not(:last-child){
+        margin-bottom: 10px;
+      }
     }
   @media screen and (min-width:$tablet){
     &--first{
@@ -129,6 +139,8 @@
     width: 100%;
     height: 100%;
     z-index: 2;
+    max-width:315px;
+    max-height: 437px;
 
     border-radius: 20px;
 
@@ -150,6 +162,8 @@
     width: 100%;
     height: 100%;
     z-index: 2;
+    width:315px;
+    max-height: 177px;
 
     border-radius: 20px;
 
@@ -171,6 +185,8 @@
     width: 100%;
     height: 100%;
     z-index: 2;
+    width:315px;
+    max-height: 281px;
 
     border-radius: 20px;
 
@@ -192,6 +208,8 @@
     width: 100%;
     height: 100%;
     z-index: 2;
+    width:315px;
+    max-height: 177px;
 
     border-radius: 20px;
 
@@ -213,6 +231,8 @@
     width: 100%;
     height: 100%;
     z-index: 2;
+    max-width:315px;
+    max-height: 130px;
 
     border-radius: 20px;
 

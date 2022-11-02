@@ -2,7 +2,8 @@
   position: absolute;
   width: 100%;
   z-index: 999;
-
+padding-top: 34px;
+padding-bottom: 17px;
   border-bottom: 2px solid #f6f7f1;
   @media screen and (min-width: $tablet) {
     padding-top: 52px;
@@ -24,7 +25,7 @@
 }
 .logo__container {
   @media screen and (max-width: 767px) {
-    margin-right: 40px;
+    margin-right: auto;
   }
   @media screen and (min-width:$tablet){
     margin-right: auto;
@@ -50,19 +51,44 @@
   }
 }
 .menu{
-  display: none;
-  &.open{
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: $mainTextColor;
-    width: 100%;
-    max-height:752px ;
+  @media screen and (max-width:1279px){
+    display: none;
+    
+      &.open {
+        display: flex;
+        flex-direction: column-reverse;
+        position: absolute;
+        top: -34px;
+        left: 0;
+        padding-top: 105px;
+        padding-left: 30px;
+        padding-bottom: 104px;
+        
+        background-color: $mainTextColor;
+        width: 100%;
+        
+        @media screen and (min-width:$tablet){
+          top: -52px;
+          padding-top: 150px;
+            padding-left: 50px;
+            padding-bottom: 206px;
+            max-height: 752px;
+        }
+      }
+  }
+  @media screen and (min-width:$desktop){
+    display: flex;
+    align-items: center;
+
   }
 }
 .navigation {
-  
+  @media screen and (max-width:767px){
+    margin-bottom: 50px;
+  }
+  @media screen and (min-width:$tablet) and (max-width:1279px){
+    margin-bottom: 70px;
+  }
   @media screen and (min-width: $desktop) {
     margin-right: 51px;
   }
@@ -75,6 +101,11 @@
   }
 }
 .nav__item {
+  @media screen and (max-width:767px){
+    &:nth-child(3){
+      display: none;
+    }
+  }
   @media screen and (max-width: 1279px) {
     &:not(:last-child) {
       margin-bottom: 30px;
@@ -90,29 +121,57 @@
   color: $secondTextColor;
   font-size: 40px;
   line-height: 1.25;
+  
+  @media screen and (max-width:1279px){
+    font-family: $secondFont;
+    font-weight: 300;
+  }
+  @media screen and (min-width:$tablet){
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        padding 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+      &:hover,
+      &:focus {
+      padding: 0 12px;
+        background-color: $btnBgColor;
+        border-radius: 5px;
+      }
+  }
   @media screen and (min-width: $desktop) {
     font-size: 22px;
     line-height: 1.14;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      padding 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &:hover,
-    &:focus {
+    &:focus{
       padding: 7px 21px;
-      background-color: $btnBgColor;
-      border-radius: 5px;
     }
+    
   }
 }
 .language {
   display: flex;
   align-items: center;
-  margin-right: 20px;
-  &--tabl{
+  top: 20px;
+  right: 85px;
+  @media screen and (max-width:1279px){
+    position: absolute;
+  }
+
+  @media screen and (min-width:$tablet){
+    top: 39px;
+    right: 105px;
+    margin: 0;
+  }
+  @media screen and (min-width:$desktop){
     margin-right: 20px;
   }
-  @media screen and (min-width: $desktop) {
+  &--tabl{
+    margin-right: 20px;
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
   }
+  
 }
 .language__btn {
   font-size: 18px;
@@ -127,17 +186,32 @@
     text-decoration: underline;
     color: $btnBgColor;
   }
+    &--last {
+      margin: 0;
+    }
+  
   @media screen and (min-width: $tablet) {
     font-size: 22px;
     line-height: 1.36;
     margin-right: 6px;
+    
   }
   
 }
-.phone {
-  @media screen and (max-width: 1279px) {
-    display: none;
+.icon__container{
+  display: flex;
+  top: 25px;
+  right: 179px;
+  @media screen and (max-width:1279px){
+    position: absolute;
   }
+  @media screen and (min-width:$tablet){
+    top: 43px;
+    right: 199px;
+  }
+}
+.phone {
+  margin-right: 12px;
   @media screen and (min-width: $desktop) {
     margin-right: 20px;
   }
@@ -149,11 +223,13 @@
   &:focus {
     fill: $hoverIconColor;
   }
+  @media screen and (max-width:1279px){
+    width: 19px;
+    height: 19px;
+  }
 }
 .basket {
-  @media screen and (max-width: 1279px) {
-    display: none;
-  }
+
 }
 .basket__icon {
   fill: $btnBgColor;
@@ -163,6 +239,10 @@
   &:focus {
     fill: $hoverIconColor;
   }
+    @media screen and (max-width:1279px) {
+      width: 19px;
+      height: 19px;
+    }
 }
 .burger__menu{
   @media screen and (min-width:$desktop){
@@ -176,6 +256,33 @@
 }
 .close__btn{
   border: none;
+  position: absolute;
     background-color: transparent;
+    top: 28px;
+    right: 30px;
     cursor: pointer;
+    @media screen and (min-width:$tablet){
+      top: 43px;
+      right: 50px;
+    }
+    @media screen and (min-width:$desktop){
+      display: none;
+    }
+}
+.about__list--header{
+  display: flex;
+  align-items: center;
+@media screen and (max-width:767px) {
+    margin-bottom: 50px;
+  }
+  @media screen and (min-width:$desktop){
+    display: none;
+  }
+  
+}
+.contacts--header{
+  @media screen and (min-width:$tablet){
+    display: none;
+  }
+  
 }

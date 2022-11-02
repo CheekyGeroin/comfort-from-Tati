@@ -4,8 +4,6 @@ const refs = {
   closeBtn: document.querySelector('.close__btn'),
 };
 
-refs.openBtn.addEventListener('click', onOpenMenu);
-
 export const onOpenMenu = () => {
   refs.menu.classList.add('open');
   refs.closeBtn.addEventListener('click', onCloseMenu);
@@ -13,6 +11,7 @@ export const onOpenMenu = () => {
 
 export const onCloseMenu = () => {
   refs.menu.classList.remove('open');
+  refs.closeBtn.removeEventListener('click', onCloseMenu);
 };
 
 export * from './openBurgerMenu';

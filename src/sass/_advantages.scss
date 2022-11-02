@@ -18,6 +18,9 @@
   }
 }
 .images__list {
+  @media screen and (max-width:767px){
+    display: none;
+  }
   @media screen and (min-width:$tablet) and (max-width:1279px){
     display: flex;
     flex-direction: column-reverse;

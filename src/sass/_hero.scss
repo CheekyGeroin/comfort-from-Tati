@@ -10,7 +10,17 @@
   padding-top: 231px;
     padding-bottom: 187px;
     overflow: hidden;
+    background-image: linear-gradient(0deg, rgba(3, 31, 38, 0.3), rgba(3, 31, 38, 0.3)), url(../images/hero/hero-tabl.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     
+      @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: linear-gradient(0deg, rgba(3, 31, 38, 0.3), rgba(3, 31, 38, 0.3)),
+          url(../images/hero/hero-tabl@2x.jpg);
+      }
   
     @media screen and (min-width:$tablet) {
       position: relative;
@@ -24,7 +34,13 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        @media (min-device-pixel-ratio: 2),
+          (min-resolution: 192dpi),
+          (min-resolution: 2dppx) {
+           background-image: linear-gradient(0deg, rgba(3, 31, 38, 0.3), rgba(3, 31, 38, 0.3)),
+            url(../images/hero/hero-tabl@2x.jpg) ;
     }
+  }
     @media screen and (min-width:$desktop) {
       padding-top: 279px;
       padding-bottom: 228px;
