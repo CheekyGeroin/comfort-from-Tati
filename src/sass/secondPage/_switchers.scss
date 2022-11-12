@@ -1,0 +1,49 @@
+.switcher__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   @media screen and (min-width:$desktop){
+    padding-top: 71px;
+        padding-bottom: 40px;
+   }
+}
+.switcher__button-container{
+    @media screen and ( min-width:$tablet){
+        margin-right: 40px;
+    }
+    @media screen and (min-width:$desktop){
+        margin-right: 71px;
+    }
+}
+.button__icon{
+    fill: $mainTextColor;
+}
+.switcher__list{
+    display: flex;
+    align-items: center;
+    @media screen and (max-width:1279px){
+        flex-wrap: wrap;
+    }
+}
+.switcher__item{
+    @media screen and (min-width:$tablet) {
+            &:not(:last-child) {
+                margin-right: 40px;
+            }
+        }
+    @media screen and (min-width:$desktop){
+        &:not(:last-child){
+            margin-right: 72px;
+        }
+    }
+}
+.switcher__buttons{
+    border: none;
+    background-color: transparent;
+    color: $mainTextColor;
+    font-weight: 300;
+    cursor: pointer;
+    &.active{
+        text-decoration: underline;
+    }
+}

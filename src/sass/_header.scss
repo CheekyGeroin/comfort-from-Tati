@@ -23,6 +23,13 @@ padding-bottom: 17px;
   }
   
 }
+.catalog__header{
+  background-color: $mainTextColor;
+  @media screen and (min-width:$desktop){
+    padding-top: 50px;
+    padding-bottom: 29px;
+  }
+}
 .logo__container {
   @media screen and (max-width: 767px) {
     margin-right: auto;
