@@ -43,7 +43,7 @@
     color: $mainTextColor;
     font-weight: 300;
     cursor: pointer;
-    &.active{
+    &--active{
         text-decoration: underline;
     }
 }
