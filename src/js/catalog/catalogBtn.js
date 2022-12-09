@@ -14,5 +14,6 @@ function onBtnClick(e) {
     currentActiveBtn.classList.remove('switcher__buttons--active');
   }
   e.target.classList.add('switcher__buttons--active');
+  console.log(e.target.id);
 }
 export default onBtnClick;
