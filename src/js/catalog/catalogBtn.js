@@ -1,6 +1,10 @@
+import renderLayout from './catalogRender';
+
 const refs = {
   list: document.querySelector('.switcher__list'),
 };
+
+let activeId;
 
 refs.list.addEventListener('click', onBtnClick);
 function onBtnClick(e) {
@@ -14,6 +18,8 @@ function onBtnClick(e) {
     currentActiveBtn.classList.remove('switcher__buttons--active');
   }
   e.target.classList.add('switcher__buttons--active');
-  console.log(e.target.id);
+  activeId = e.target.id;
+
+  renderLayout(activeId);
 }
 export default onBtnClick;

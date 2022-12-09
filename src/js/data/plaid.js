@@ -33,4 +33,9 @@ export const plaids = [
     alt: 'Серденько',
   },
 ];
+
+export const listTitle = {
+  mainTitle: 'Пледи',
+};
+
 export const plaidsEntires = [{}, {}, {}];

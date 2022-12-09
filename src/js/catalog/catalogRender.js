@@ -1,17 +1,23 @@
-import { plaids } from '../data/plaid';
+import { plaids, listTitle } from '../data/plaid';
 import renderPlaidLayout from './renderLayout/plaidLayout';
 
 const refs = {
-  list: document.querySelector('.catalog-layout__list'),
+  container: document.querySelector('.catalog__list-container'),
 };
+let layout;
 
 const renderLayout = id => {
   console.log(id);
 
   switch (id) {
     case 'plaid':
-      const layout = renderPlaidLayout(plaids);
-      refs.list.insertAdjacentHTML('beforeend', layout.join(''));
+      layout = JSON.stringify(renderPlaidLayout(plaids, listTitle));
+      const parsedLayout = JSON.parse(layout);
+      console.log(parsedLayout);
+      refs.container.insertAdjacentHTML('beforeend', parsedLayout);
+      break;
+    case 'bathroom':
+      layout;
   }
 };
 
