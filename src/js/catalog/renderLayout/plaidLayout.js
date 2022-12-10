@@ -1,6 +1,5 @@
 const renderPlaidLayout = (data, listTitle) => {
   const { mainTitle } = listTitle;
-  console.log(mainTitle);
 
   return `<div class='title__container'>
     <h1 class='title'>${mainTitle}</h1>
