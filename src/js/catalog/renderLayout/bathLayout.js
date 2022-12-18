@@ -1,7 +1,7 @@
 const bathLayout = (data, bathTitle) => {
   const { mainTitle } = bathTitle;
 
-  return `<div class='title__container'>
+  return `<div class='catalog-title__container'>
     <h1 class='title'>${mainTitle}</h1>
   </div>
     <ul class='list'>
@@ -10,7 +10,7 @@ const bathLayout = (data, bathTitle) => {
           `<li class="list__item">
           <a href="#" class="list__link">
           <img class="list__img" src=${src} alt=${alt} />
-          <div class="text__container">
+          <div class="list-text__container">
             <p class="list__text">${title}</p>
           </div>
           </a>

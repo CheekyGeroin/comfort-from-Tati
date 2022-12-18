@@ -1,6 +1,6 @@
 export const plaids = [
   {
-    src: '/images/catalog-list/listPlaid-desk.jpg',
+    src: 'images/catalog-list/list-plaid-desk.jpg',
     smallImage: '',
     smallImage2x: '',
     mediumImage: '',
@@ -11,7 +11,7 @@ export const plaids = [
     alt: 'Плетінка',
   },
   {
-    src: '/images/catalog-list/list-yellow-plaid-desk.jpg',
+    src: 'images/catalog-list/list-yellow-plaid-desk.jpg',
     smallImage: '',
     smallImage2x: '',
     mediumImage: '',
@@ -22,7 +22,7 @@ export const plaids = [
     alt: 'Соти',
   },
   {
-    src: '/images/catalog-list/list-pink-plaid-desk.jpg',
+    src: 'images/catalog-list/list-pink-plaid-desk.jpg',
     smallImage: '',
     smallImage2x: '',
     mediumImage: '',
